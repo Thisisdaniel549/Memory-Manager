@@ -8,7 +8,7 @@ Then call the other functions such as get_base, get_process_id and get_base_size
 Credits to carlwastaken, i did look at his codebase and use some parts of his 'memify' code to understand some parts easier.
 
 # Contact
-If you would like to contact me regarding this then shoot me dm on discord at the user @rtl_dispatch_exception
+If you would like to contact me regarding this then free to send me a dm on discord at the user @rtl_dispatch_exception
 
 # Extra
 If you would like to credit me for using my memory manager, then feel free to.
