@@ -23,16 +23,17 @@ bool c_memory_manager::initialize() {
 
 	this->process_name = "csgo.exe";
 	this->module_name = "csgo.exe";
-	this->base_module = this->get_base(this->module_name);
-	this->base_size = this->get_base_size(this->module_name);
-	if (!this->base_module || !this->base_size) {
-		logging::error("failed to get base module or base size for %s", this->module_name.c_str());
-		return false;
-	}
 
 	this->process_id = this->get_process_id(this->process_name);
 	if (!this->process_id) {
 		logging::error("failed to get process id for %s", this->process_name.c_str());
+		return false;
+	}
+
+	this->base_module = this->get_base(this->module_name);
+	this->base_size = this->get_base_size(this->module_name);
+	if (!this->base_module || !this->base_size) {
+		logging::error("failed to get base module or base size for %s", this->module_name.c_str());
 		return false;
 	}
 
